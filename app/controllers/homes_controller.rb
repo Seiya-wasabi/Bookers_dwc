@@ -7,6 +7,7 @@ class HomesController < ApplicationController
   def create
     book =Book.new(book_params)
     book.save
+    flash[:text1] = "Book was successfully created."
     redirect_to home_path(book.id)
   end
   
