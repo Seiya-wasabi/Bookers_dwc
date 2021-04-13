@@ -34,3 +34,40 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
+
+.index-title {
+  display: block;
+  margin-top: 17.420px;
+  margin-bottom: 17.420px;
+}
+
+th {
+  padding-bottom: 5px;
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+.new_book {
+  margin-top: 16.185px;
+  margin-bottom: 16.185px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.action {
+  display: block;
+  margin-bottom: 10px;
+}
