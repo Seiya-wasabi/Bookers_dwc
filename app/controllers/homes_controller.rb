@@ -18,6 +18,7 @@ class HomesController < ApplicationController
   end
 
   def edit
+    @book = Book.find(params[:id])
   end
   
   def top
