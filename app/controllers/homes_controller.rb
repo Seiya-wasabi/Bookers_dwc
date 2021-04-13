@@ -3,14 +3,18 @@ class HomesController < ApplicationController
     @book =Book.new
     @books =Book.all
   end
-  
+
   def create
-    book =Book.new(book_params)
-    book.save
-    flash[:text1] = "Book was successfully created."
-    redirect_to home_path(book.id)
+    @book =Book.new(book_params)
+    if @book.save
+      flash[:text1] = "Book was successfully created."
+      redirect_to home_path(book.id)
+    else
+      @books = Book.all
+      render :index
+    end
   end
-  
+
   def show
     @book = Book.find(params[:id])
   end
@@ -21,10 +25,10 @@ class HomesController < ApplicationController
   def edit
     @book = Book.find(params[:id])
   end
-  
+
   def top
   end
-  
+
   private
   def book_params
     params.require(:book).permit(:title, :body)
