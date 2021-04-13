@@ -3,5 +3,5 @@
   <p class ="text"><%= flash[:text2] %></p>
   <p class ="text"><strong>Title: </strong><%= @book.title %></p>
   <p class ="text"><strong>Body: </strong><%= @book.body %></p>
-<p><%= link_to "Edit", edit_home_path(@book.id) %> ｜ <%= link_to "Back", homes_path %></p>
+<p><%= link_to "Edit", edit_path(@book.id) %> ｜ <%= link_to "Back", books_path %></p>
 </div>

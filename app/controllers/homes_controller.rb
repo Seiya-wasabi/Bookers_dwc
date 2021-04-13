@@ -5,10 +5,10 @@ class HomesController < ApplicationController
   end
 
   def create
-    @book =Book.new(book_params)
+    @book = Book.new(book_params)
     if @book.save
       flash[:text1] = "Book was successfully created."
-      redirect_to home_path(book.id)
+      redirect_to book_path(@book.id)
     else
       @books = Book.all
       render :index

@@ -15,8 +15,8 @@
       <tr>
         <td><%= b.title %></td>
         <td><%= b.body %></td>
-        <td><%= link_to "Show", home_path(b.id) %></td>
-        <td><%= link_to "Edit", edit_home_path(b.id) %></td>
+        <td><%= link_to "Show", book_path(b.id) %></td>
+        <td><%= link_to "Edit", edit_book_path(b.id) %></td>
         <td><%= link_to "Destroy", destroy_book_path(b.id), method: :delete, "data-confirm" =>"Are You Sure？" %></td>
       </tr>
     <% end %>
@@ -37,7 +37,7 @@
     </div>
   <% end %>
   <%# ここまでエラーメッセージ %>
-    <%= form_with model:@book, url:"homes/#{@book.id}", local:true do|f|%>
+    <%= form_with model:@book, url:"books#{@book.id}", local:true do|f|%>
     <div class ="field">
       <h4>Title</h4>
       <%= f.text_field :title %>
